@@ -3,7 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>Beauty Salon Bootstrap HTML5 Template | Webthemez</title>
+<!-- Title Tag -->
+<title>Best Event Organizers in Hyderabad | SK Events | Weddings, Birthdays & Business Events</title>
+
+<!-- Meta Description -->
+<meta name="description" content="SK Events, trusted since 2004, organizes weddings, birthdays, and business events in Hyderabad. With 1000+ successful events and a 4.5+ rating, we provide exceptional services including engagements, marriages, Haldi, Mehendi, receptions, and corporate functions.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="event organizers in Hyderabad, wedding planners in Hyderabad, birthday event organizers, business event planners, SK Events, Hyderabad events, wedding events, corporate event planning, engagement, mehendi, haldi, birthday parties, receptions, corporate functions, best event planners, event management, custom event services">
+
+<!-- Author -->
+<meta name="author" content="SK Events">
+
+<!-- Open Graph Tags (for social sharing) -->
+<meta property="og:title" content="SK Events | Weddings, Birthdays & Business Events in Hyderabad">
+<meta property="og:description" content="We organize weddings, birthday parties, and business events in Hyderabad. 1000+ events organized since 2004 with a 4.5+ rating. Contact us for engagements, Haldi, Mehendi, receptions, and corporate functions.">
+<meta property="og:url" content="https://skeventshyderabad.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SK Events | Top Event Organizers in Hyderabad">
+<meta name="twitter:description" content="Looking for event organizers in Hyderabad? SK Events offers wedding, birthday, and corporate event planning services with over 1000 successful events since 2004.">
+
+<!-- Geo Meta Tags (targeting Hyderabad) -->
+<meta name="geo.region" content="IN-TG">
+<meta name="geo.placename" content="Hyderabad">
+<meta name="geo.position" content="17.385044;78.486671">
+<meta name="ICBM" content="17.385044, 78.486671">
+
 <link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -16,6 +44,41 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/html5element.js"></script>
 <![endif]-->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Function to animate the counter from 0 to target value
+      function animateCounter(element, start, end, duration) {
+          let startTimestamp = null;
+          const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              element.innerHTML = Math.floor(progress * (end - start) + start);
+              if (progress < 1) {
+                  window.requestAnimationFrame(step);
+              } else {
+                  element.innerHTML = end + '+';  // Add "+" after reaching 1000
+              }
+          };
+          window.requestAnimationFrame(step);
+      }
+  
+      // Use IntersectionObserver to trigger the counter animation when in view
+      const counterElement = document.getElementById('counter');
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  animateCounter(counterElement, 0, 1000, 3000); // 0 to 1000 in 4 seconds
+                  observer.unobserve(counterElement); // Stop observing after animation starts
+              }
+          });
+      }, { threshold: 0.5 });
+  
+      // Observe the counter element
+      observer.observe(counterElement);
+  });
+  </script>
+  
+
  
 </head>
 <body>
@@ -85,7 +148,9 @@
     <div class="service_wrapper">
       <div class="row">
         <div class="col-md-4">
-		<div class="service_icon delay-03s animated wow  zoomIn"> <span class="about_us1">1000+</span> </div>
+          <div class="service_icon delay-03s animated wow zoomIn">
+            <span class="about_us1" id="counter">0</span>
+        </div>       
           <div class="service_block">
             
             <h3 class="animated fadeInUp wow"><b><span style="color: goldenrod;">Events</span></b></h3>
@@ -322,7 +387,7 @@
                             </div>
                             <div class="detail">
                                 <h4>Location</h4>
-                                <p>Hyderabad</p>
+                                <p>Road Number 29, Cheryaal, Cheeriyal, Secunderabad, Telangana</p>
                             </div> 
                         </div>
        		  
@@ -341,7 +406,7 @@
     </section>
   </div>
   <div class="container">
-    <div class="footer_bottom"><span>Copyright © reserved,    Template by <a href="http://welcomewebworks.com">WelcomeWebWorks.com</a>. </span> </div>
+    <div class="footer_bottom"><span>&copy; 2024 <a href="http://www.welcomewebworks.com">WELCOME WEB WORKS</a>. All rights reserved.</span> </div>
   </div>
 </footer>
 

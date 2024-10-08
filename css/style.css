@@ -348,6 +348,12 @@ p {
 .res-nav_click {
     display: none;
 }
+.service_icon {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
 	
 
 /* Nav Styles
